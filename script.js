@@ -17,6 +17,9 @@ if (menuToggle && mainNav) {
   mainNav.querySelectorAll("a").forEach((link) => {
     link.addEventListener("click", () => setMenuState(false));
   });
+
+  // Ensure closed state on initial load.
+  setMenuState(false);
 }
 
 // Lightweight parallax effect for marked sections.
