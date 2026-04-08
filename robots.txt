@@ -1,0 +1,8 @@
+# https://www.c2professionalparquet.it
+User-agent: *
+Allow: /
+
+# Risorse statiche
+Allow: /assets/
+
+Sitemap: https://www.c2professionalparquet.it/sitemap.xml
