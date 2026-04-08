@@ -40,3 +40,27 @@ const currentYear = document.getElementById("currentYear");
 if (currentYear) {
   currentYear.textContent = String(new Date().getFullYear());
 }
+
+const galleryLightbox = document.getElementById("galleryLightbox");
+const galleryLightboxImg = galleryLightbox?.querySelector(".gallery-lightbox-img");
+const galleryLightboxClose = galleryLightbox?.querySelector(".gallery-lightbox-close");
+
+if (galleryLightbox && galleryLightboxImg) {
+  document.querySelectorAll("button.ig-tile").forEach((tile) => {
+    tile.addEventListener("click", () => {
+      const thumb = tile.querySelector("img");
+      if (!thumb) return;
+      galleryLightboxImg.src = thumb.currentSrc || thumb.src;
+      galleryLightboxImg.alt = thumb.alt || "";
+      galleryLightbox.showModal();
+    });
+  });
+
+  galleryLightboxClose?.addEventListener("click", () => {
+    galleryLightbox.close();
+  });
+
+  galleryLightbox.addEventListener("click", (e) => {
+    if (e.target === galleryLightbox) galleryLightbox.close();
+  });
+}
