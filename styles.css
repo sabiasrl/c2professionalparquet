@@ -283,17 +283,17 @@ h2 {
 
 #servizi {
   background: linear-gradient(180deg, rgba(16, 13, 10, 0.85), rgba(16, 13, 10, 0.9)),
-    url("assets/work-1.jpg") center / cover no-repeat;
+    url("assets/fb/stairs.jpg") center / cover no-repeat;
 }
 
 #testimonials {
   background: linear-gradient(180deg, rgba(20, 16, 12, 0.85), rgba(20, 16, 12, 0.9)),
-    url("assets/work-4.jpg") center / cover no-repeat;
+    url("assets/fb/stair-2.jpg") center / cover no-repeat;
 }
 
 #contatti {
   background: linear-gradient(180deg, rgba(17, 13, 10, 0.86), rgba(17, 13, 10, 0.92)),
-    url("assets/work-5.jpg") center / cover no-repeat;
+    url("assets/fb/floor-purple.jpg") center / cover no-repeat;
 }
 
 #galleria {
