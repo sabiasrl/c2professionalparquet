@@ -36,16 +36,37 @@ body {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: var(--top-bg);
+  background-color: var(--top-bg);
   border-bottom: 3px solid var(--wood);
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.site-header::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: min(200px, 32vw);
+  background-image: url("assets/c2-dog.png");
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: auto 100%;
+  opacity: 0.2;
+  pointer-events: none;
+  z-index: 0;
 }
 
 .nav-wrap {
+  position: relative;
+  z-index: 1;
   display: flex;
   align-items: center;
   justify-content: flex-start;
   gap: 0.7rem;
   padding: 0.9rem 0;
+  padding-right: 0.75rem;
 }
 
 .brand {
@@ -767,6 +788,9 @@ a.ig-tile-fb-more:focus-visible {
     grid-template-columns: repeat(3, 1fr);
   }
 
+  .nav-wrap {
+    padding-right: clamp(3.25rem, 14vw, 7.5rem);
+  }
 }
 
 @media (max-width: 759px) {
